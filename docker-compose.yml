@@ -4,7 +4,7 @@ services:
     working_dir: /lab
     command: python app/server.py --host 0.0.0.0 --port 8080
     ports:
-      - "8080:8080"
+      - "18080:8080"
     volumes:
       - .:/lab
 
@@ -13,6 +13,6 @@ services:
     working_dir: /lab
     command: python app/server.py --host 0.0.0.0 --port 8443 --certfile certs/localhost.crt --keyfile certs/localhost.key
     ports:
-      - "8443:8443"
+      - "18443:8443"
     volumes:
       - .:/lab

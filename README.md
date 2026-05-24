@@ -61,19 +61,21 @@ docker compose up
 
 O Compose sobe dois servicos:
 
-- HTTP em `http://localhost:8080`;
-- HTTPS em `https://localhost:8443`.
+- HTTP em `http://localhost:18080`;
+- HTTPS em `https://localhost:18443`.
+
+Observacao: internamente os containers usam as portas `8080` e `8443`; no seu computador, o Docker publica em `18080` e `18443` para reduzir conflitos com servicos locais.
 
 Em outro terminal, teste HTTP:
 
 ```bash
-curl -v http://localhost:8080/
+curl -v http://localhost:18080/
 ```
 
 Teste HTTPS sem confiar na CA local:
 
 ```bash
-curl -v https://localhost:8443/
+curl -v https://localhost:18443/
 ```
 
 Esse comando deve falhar com erro de certificado, porque o sistema operacional nao conhece a CA local do lab.
@@ -81,7 +83,7 @@ Esse comando deve falhar com erro de certificado, porque o sistema operacional n
 Teste HTTPS informando a CA local:
 
 ```bash
-curl --cacert certs/lab-ca.crt -v https://localhost:8443/
+curl --cacert certs/lab-ca.crt -v https://localhost:18443/
 ```
 
 Esse comando deve funcionar, porque voce informou explicitamente qual CA deve ser usada para validar o certificado.

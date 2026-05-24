@@ -9,8 +9,8 @@ Entender como HTTPS usa certificados digitais para autenticar um servidor e cifr
 Siga o [README do laboratorio](README.md) ate conseguir acessar:
 
 ```text
-http://localhost:8080/
-https://localhost:8443/
+http://localhost:18080/
+https://localhost:18443/
 ```
 
 ## Exercicio 1: HTTP Sem TLS
@@ -18,7 +18,7 @@ https://localhost:8443/
 Execute:
 
 ```bash
-curl -v http://localhost:8080/
+curl -v http://localhost:18080/
 ```
 
 Responda:
@@ -38,7 +38,7 @@ Resultado esperado:
 Execute:
 
 ```bash
-curl -v https://localhost:8443/
+curl -v https://localhost:18443/
 ```
 
 Responda:
@@ -58,7 +58,7 @@ Resultado esperado:
 Execute:
 
 ```bash
-curl --cacert certs/lab-ca.crt -v https://localhost:8443/
+curl --cacert certs/lab-ca.crt -v https://localhost:18443/
 ```
 
 Responda:
@@ -105,7 +105,7 @@ Resultado esperado:
 Execute:
 
 ```bash
-openssl s_client -connect localhost:8443 -servername localhost -CAfile certs/lab-ca.crt
+openssl s_client -connect localhost:18443 -servername localhost -CAfile certs/lab-ca.crt
 ```
 
 Responda:
