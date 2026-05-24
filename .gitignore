@@ -1,0 +1,8 @@
+certs/*.crt
+certs/*.csr
+certs/*.ext
+certs/*.key
+certs/*.srl
+outputs/
+__pycache__/
+.ipynb_checkpoints/
