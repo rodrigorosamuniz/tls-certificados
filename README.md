@@ -1,14 +1,14 @@
 # Lab: TLS, Certificados E HTTPS
 
-Este laboratorio mostra como HTTPS funciona na pratica usando um ambiente local reproduzivel com Docker, Python e OpenSSL.
+Este laboratório mostra como HTTPS funciona na prática usando um ambiente local reproduzivel com Docker, Python e OpenSSL.
 
-O objetivo nao e obter um certificado publico real para `localhost`. O objetivo e entender os blocos fundamentais:
+O objetivo nao e obter um certificado público real para `localhost`. O objetivo e entender os blocos fundamentais:
 
 - diferenca entre HTTP e HTTPS;
 - chave privada, certificado de servidor e CA;
 - Subject Alternative Name (SAN);
 - erro de confianca em certificados desconhecidos;
-- validacao manual com uma CA local;
+- validação manual com uma CA local;
 - leitura de certificado e handshake com `openssl`;
 - onde Let's Encrypt entra em um ambiente real.
 
@@ -27,7 +27,7 @@ tests/
 certs/.gitkeep
 ```
 
-## Pre-Requisitos
+## Pré-requisitos
 
 Para a trilha principal:
 
@@ -102,17 +102,17 @@ Abra o notebook:
 lab_tls_certificados_https.ipynb
 ```
 
-Execute as celulas em ordem. O notebook guia o aluno por:
+Execute as células em ordem. O notebook guia o aluno por:
 
 1. gerar certificados;
 2. inspecionar campos do certificado;
 3. subir os servidores com Docker;
 4. testar HTTP e HTTPS;
-5. comparar falha de confianca e validacao com CA local;
+5. comparar falha de confianca e validação com CA local;
 6. analisar o handshake TLS com `openssl s_client`;
 7. conectar o aprendizado com Let's Encrypt.
 
-O notebook usa comandos de terminal. Em ambientes Jupyter locais, execute as celulas normalmente. No Colab, a parte conceitual funciona, mas Docker normalmente nao esta disponivel. Para Colab, use o notebook como roteiro de leitura e execute os comandos em uma maquina local ou VM.
+O notebook usa comandos de terminal. Em ambientes Jupyter locais, execute as células normalmente. No Colab, a parte conceitual funciona, mas Docker normalmente nao esta disponivel. Para Colab, use o notebook como roteiro de leitura e execute os comandos em uma maquina local ou VM.
 
 ## Onde Entra O Let's Encrypt
 
@@ -138,7 +138,7 @@ sudo certbot certonly --webroot \
   -d exemplo.seudominio.com
 ```
 
-Em aula, prefira explicar esse fluxo depois que os alunos entenderem a diferenca entre CA local, certificado de servidor, cadeia de confianca e validacao de dominio.
+Em aula, prefira explicar esse fluxo depois que os alunos entenderem a diferenca entre CA local, certificado de servidor, cadeia de confianca e validação de dominio.
 
 ## Testes Do Lab
 
@@ -148,8 +148,8 @@ Os scripts do lab possuem testes com `unittest`:
 python3 -m unittest discover tests
 ```
 
-## Cuidados Didaticos
+## Cuidados Didáticos
 
 Nao use chaves privadas reais, dominios corporativos, servidores de producao ou certificados validos da sua organizacao neste lab.
 
-Os certificados gerados aqui sao didaticos e devem ficar apenas no ambiente local. A pasta `certs/` esta configurada para nao versionar arquivos sensiveis gerados durante a execucao.
+Os certificados gerados aqui sao didáticos e devem ficar apenas no ambiente local. A pasta `certs/` esta configurada para nao versionar arquivos sensíveis gerados durante a execução.

@@ -2,11 +2,11 @@
 
 ## Objetivo
 
-Entender como HTTPS usa certificados digitais para autenticar um servidor e cifrar a comunicacao, comparando HTTP simples, HTTPS com certificado nao confiavel e HTTPS validado por uma CA local.
+Entender como HTTPS usa certificados digitais para autenticar um servidor e cifrar a comunicação, comparando HTTP simples, HTTPS com certificado nao confiavel e HTTPS validado por uma CA local.
 
 ## Preparacao
 
-Siga o [README do laboratorio](README.md) ate conseguir acessar:
+Siga o [README do laboratório](README.md) ate conseguir acessar:
 
 ```text
 http://localhost:18080/
@@ -26,7 +26,7 @@ Responda:
 1. Qual protocolo aparece na URL?
 2. Existe handshake TLS?
 3. O corpo da resposta veio em JSON?
-4. O que uma pessoa na rede poderia observar em uma comunicacao HTTP sem TLS?
+4. O que uma pessoa na rede poderia observar em uma comunicação HTTP sem TLS?
 
 Resultado esperado:
 
@@ -70,7 +70,7 @@ Responda:
 
 Resultado esperado:
 
-- o aluno entende validacao manual de cadeia;
+- o aluno entende validação manual de cadeia;
 - o aluno entende que confianca depende da CA conhecida pelo cliente.
 
 ## Exercicio 4: Inspecao Do Certificado
@@ -125,7 +125,7 @@ Resultado esperado:
 Responda:
 
 1. Por que Let's Encrypt precisa validar controle de dominio?
-2. Por que `localhost` nao e um bom alvo para certificado publico tradicional?
+2. Por que `localhost` nao e um bom alvo para certificado público tradicional?
 3. Qual desafio ACME usa um arquivo em `/.well-known/acme-challenge/`?
 4. Qual desafio ACME usa registro TXT no DNS?
 5. Em que situacao o DNS-01 costuma ser melhor que HTTP-01?
@@ -133,7 +133,7 @@ Responda:
 Resultado esperado:
 
 - o aluno conecta o lab local com emissao publica real;
-- o aluno entende que Let's Encrypt automatiza a validacao e emissao para dominios controlados.
+- o aluno entende que Let's Encrypt automatiza a validação e emissao para dominios controlados.
 
 ## Consolidacao Individual
 
