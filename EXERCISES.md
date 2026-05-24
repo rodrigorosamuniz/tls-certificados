@@ -1,10 +1,10 @@
-# Exercicios: TLS, Certificados E HTTPS
+# Exercícios: TLS, Certificados E HTTPS
 
 ## Objetivo
 
 Entender como HTTPS usa certificados digitais para autenticar um servidor e cifrar a comunicação, comparando HTTP simples, HTTPS com certificado nao confiavel e HTTPS validado por uma CA local.
 
-## Preparacao
+## Preparação
 
 Siga o [README do laboratório](README.md) ate conseguir acessar:
 
@@ -13,7 +13,7 @@ http://localhost:18080/
 https://localhost:18443/
 ```
 
-## Exercicio 1: HTTP Sem TLS
+## Exercício 1: HTTP Sem TLS
 
 Execute:
 
@@ -31,9 +31,9 @@ Responda:
 Resultado esperado:
 
 - o aluno identifica que HTTP nao autentica o servidor com certificado;
-- o aluno entende que HTTP nao cifra o conteudo da aplicacao.
+- o aluno entende que HTTP nao cifra o conteúdo da aplicação.
 
-## Exercicio 2: HTTPS Sem CA Confiavel
+## Exercício 2: HTTPS Sem CA Confiavel
 
 Execute:
 
@@ -53,7 +53,7 @@ Resultado esperado:
 - o aluno separa "conexao cifrada" de "identidade confiavel";
 - o aluno entende que a cadeia de confianca precisa chegar a uma CA reconhecida pelo cliente.
 
-## Exercicio 3: HTTPS Com CA Informada Manualmente
+## Exercício 3: HTTPS Com CA Informada Manualmente
 
 Execute:
 
@@ -73,7 +73,7 @@ Resultado esperado:
 - o aluno entende validação manual de cadeia;
 - o aluno entende que confianca depende da CA conhecida pelo cliente.
 
-## Exercicio 4: Inspecao Do Certificado
+## Exercício 4: Inspecao Do Certificado
 
 Execute:
 
@@ -100,7 +100,7 @@ Resultado esperado:
 - o aluno localiza CN, issuer, validade e SAN;
 - o aluno entende que navegadores modernos dependem de SAN para validar nomes.
 
-## Exercicio 5: Handshake TLS
+## Exercício 5: Handshake TLS
 
 Execute:
 
@@ -120,7 +120,7 @@ Resultado esperado:
 - o aluno observa o handshake TLS;
 - o aluno entende que SNI permite selecionar certificado por nome de servidor.
 
-## Exercicio 6: Relacao Com Let's Encrypt
+## Exercício 6: Relação Com Let's Encrypt
 
 Responda:
 
@@ -128,14 +128,14 @@ Responda:
 2. Por que `localhost` nao e um bom alvo para certificado público tradicional?
 3. Qual desafio ACME usa um arquivo em `/.well-known/acme-challenge/`?
 4. Qual desafio ACME usa registro TXT no DNS?
-5. Em que situacao o DNS-01 costuma ser melhor que HTTP-01?
+5. Em que situação o DNS-01 costuma ser melhor que HTTP-01?
 
 Resultado esperado:
 
 - o aluno conecta o lab local com emissao publica real;
 - o aluno entende que Let's Encrypt automatiza a validação e emissao para dominios controlados.
 
-## Consolidacao Individual
+## Consolidação Individual
 
 Preencha a tabela:
 

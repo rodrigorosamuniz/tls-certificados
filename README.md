@@ -59,12 +59,12 @@ Suba os servidores:
 docker compose up
 ```
 
-O Compose sobe dois servicos:
+O Compose sobe dois serviços:
 
 - HTTP em `http://localhost:18080`;
 - HTTPS em `https://localhost:18443`.
 
-Observacao: internamente os containers usam as portas `8080` e `8443`; no seu computador, o Docker publica em `18080` e `18443` para reduzir conflitos com servicos locais.
+Observação: internamente os containers usam as portas `8080` e `8443`; no seu computador, o Docker publica em `18080` e `18443` para reduzir conflitos com serviços locais.
 
 Em outro terminal, teste HTTP:
 
@@ -124,11 +124,11 @@ Let's Encrypt emite certificados publicamente confiaveis para nomes de dominio, 
 
 Por isso, `localhost` e um subdominio aleatorio de tunel nao substituem automaticamente um dominio controlado. Para emissao real, use um dominio seu, DNS configurado e um servidor acessivel publicamente.
 
-Este lab usa uma CA local para ensinar a mecanica de certificados sem depender de dominio, DNS, portas publicas ou creditos de servico.
+Este lab usa uma CA local para ensinar a mecanica de certificados sem depender de dominio, DNS, portas publicas ou créditos de serviço.
 
 ## Extensao Opcional: Certbot Com Dominio Real
 
-Use somente se voce tiver um dominio controlado e entender o impacto de expor um servico publicamente.
+Use somente se voce tiver um dominio controlado e entender o impacto de expor um serviço publicamente.
 
 Exemplo conceitual com HTTP-01/webroot:
 
@@ -150,6 +150,6 @@ python3 -m unittest discover tests
 
 ## Cuidados Didáticos
 
-Nao use chaves privadas reais, dominios corporativos, servidores de producao ou certificados validos da sua organizacao neste lab.
+Nao use chaves privadas reais, dominios corporativos, servidores de produção ou certificados validos da sua organização neste lab.
 
 Os certificados gerados aqui sao didáticos e devem ficar apenas no ambiente local. A pasta `certs/` esta configurada para nao versionar arquivos sensíveis gerados durante a execução.
